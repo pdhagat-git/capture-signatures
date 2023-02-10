@@ -2,15 +2,15 @@ import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 
 import { WagmiConfig, createClient } from 'wagmi';
-import { mainnet, polygon, optimism, arbitrum } from 'wagmi/chains';
+import { mainnet} from 'wagmi/chains';
+import { MetaMaskConnector } from 'wagmi/connectors/metaMask'
 import { ConnectKitProvider, getDefaultClient } from 'connectkit';
 
 const client = createClient(
   getDefaultClient({
-    appName: 'ConnectKit Next.js demo',
-    //infuraId: process.env.NEXT_PUBLIC_INFURA_ID,
-    //alchemyId:  process.env.NEXT_PUBLIC_ALCHEMY_ID,
-    chains: [mainnet, polygon, optimism, arbitrum],
+    appName: 'Signature app',
+    chains: [mainnet],
+    connectors: [ new MetaMaskConnector({ chains: [mainnet] })]
   })
 );
 
