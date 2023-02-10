@@ -19,10 +19,10 @@ const client = createClient(
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
-  const { walletAddress, email, id } = router.query
+  const { walletAddress, email} = router.query
 
 
-  if(!(walletAddress&&email&&id)) {
+  if(!(walletAddress&&email)) {
     return <ErrorPage statusCode={404} />
   }
 

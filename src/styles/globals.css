@@ -103,6 +103,7 @@ a {
   border-radius: 9px;
   margin-right: 10px;
   background-color: #313235;
+  cursor: pointer;
 }
 
 .signText {
