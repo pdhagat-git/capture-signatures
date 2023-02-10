@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
 import { ConnectKitButton } from "connectkit";
-import { Message } from "../components/Message";
+import { Message } from "../../components/Message";
 import { useAccount, useConnect } from "wagmi";
-import { SignButton } from "../components/SignButton";
+import { SignButton } from "../../components/SignButton";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { IncorrectWallet } from "../components/IncorrectWallet";
+import { IncorrectWallet } from "../../components/IncorrectWallet";
 
 const Home: NextPage = () => {
   const { address, isConnected } = useAccount();
