@@ -148,6 +148,9 @@ a {
   transition: all .3s ease-in-out;
   text-align: center;
   margin: 0 auto;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 connect_kit_btn .primary div{
   text-align: center;
