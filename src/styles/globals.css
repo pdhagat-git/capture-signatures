@@ -77,10 +77,13 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
+}
+.main_content_wra{
   background-color: transparent;
   background-image: radial-gradient(at bottom right, #239F95 35%, #00F7B6 100%);
   background-repeat: no-repeat;
   min-height: 100vh;
+  padding-top:220px;
 }
 
 a {
@@ -196,4 +199,9 @@ a {
 }
 .message_inn_wrap .alert .inn_txt {
   max-width: 300px;
+}
+.main_header {
+  background-color: #fff;
+  padding: 15px 20px;
+  text-align: center;
 }

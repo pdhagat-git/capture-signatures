@@ -17,6 +17,7 @@ export const SignButton = (props: SignButton) => {
     email,
   });
   const [isSuccess, setIsSuccess] = useState(false);
+  console.log("sign button", isSigned)
 
   const callWebhook = async (data: { signature: string, walletAddress: string, email: string }) => {
     await axios.post("/api/webhook", data);
