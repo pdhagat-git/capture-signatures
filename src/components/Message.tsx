@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 import { useAccount } from "wagmi";
 
-export const Message = () => {
+interface Message {
+  isSigned: boolean
+}
+export const Message = (props:Message) => {
+  const {isSigned} = props;
   const { isConnected } = useAccount();
   const [connected, setConnected] = useState(false);
 
@@ -12,12 +16,15 @@ export const Message = () => {
   return (
     <div
       style={{
-        marginBottom: "2vh",
+        fontSize: '42px',
+        color: '#fff',
+        marginBottom: '45px',
+        lineHeight: '28px',
       }}
     >
-      {connected
+      {connected && !isSigned
         ? "Click Sign to sign a custom message"
-        : "Please connect your wallet"}
+        : "Thank you!"}
     </div>
   );
 };

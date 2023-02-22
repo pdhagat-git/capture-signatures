@@ -77,9 +77,10 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  background-color: transparent;
+  background-image: radial-gradient(at bottom right, #239F95 35%, #00F7B6 100%);
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 a {
@@ -98,15 +99,101 @@ a {
 }
 
 .signButton {
-  height: 40px;
-  width: 175px;
-  border-radius: 9px;
-  margin-right: 10px;
-  background-color: #313235;
+  min-width: 175px;
+  border-radius: 30px;
+  margin-right: 15px;
+  background-color: #fff;
   cursor: pointer;
+  padding: 18px;
+  color: #239F95;
+  font-size: 22px;
+  transition: all .3s ease-in-out;
+  border: none;
+}
+.signButton:hover {
+    color: #fff;
+    background: #414144;
+    box-shadow: inherit;
 }
 
 .signText {
   color: white;
   font-size: 16px;
+}
+.main_content_wrap{
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.message_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.connect_kit_btn .cEEfEW.primary {
+  border-radius: 30px;
+  background-color: #fff;
+  cursor: pointer;
+  padding: 15px;
+  color: #239F95;
+  font-size: 22px;
+  border: none;
+  min-width: 245px;
+  min-height: 57px;
+  transition: all .3s ease-in-out;
+}
+.connect_kit_btn .dmGwqV:hover .sc-grxQYx {
+  border-radius: 30px;
+}
+
+.message_wrapper.success-message {
+  flex-direction: column;
+}
+
+
+.message_inn_wrap .alert {
+  padding: 20px;
+  color: #333;
+  opacity: 1;
+  transition: opacity 0.6s;
+  margin-bottom: 15px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border-left: 5px solid #178344;
+  display: flex;
+  align-items: center;
+}
+.message_inn_wrap .alert.success {
+  background-color: #a8f0c6;
+}
+.message_inn_wrap .closebtn {
+  margin-left: 15px;
+  font-weight: bold;
+  float: right;
+  transition: 0.3s;
+  width: 30px;
+  height: 30px;
+  opacity: 0.8;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.6em;
+  cursor: pointer;
+  line-height: 28px;
+  border-color: #178344;
+  color: #178344;
+}
+
+.message_inn_wrap .closebtn:hover {
+  color: black;
+}
+.message_inn_wrap .success_text{
+  margin-right: 4px;
+}
+.message_inn_wrap .alert .inn_txt {
+  max-width: 300px;
 }

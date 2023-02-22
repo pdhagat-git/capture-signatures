@@ -10,6 +10,7 @@ import { IncorrectWallet } from "../../components/IncorrectWallet";
 const Home: NextPage = () => {
   const { address, isConnected } = useAccount();
   const [correctAddress, setCorrectAddress] = useState(false);
+  const [isSigned, setIsSigned] = useState(false);
   const router = useRouter();
   const { walletAddress } = router.query;
 
@@ -24,7 +25,7 @@ const Home: NextPage = () => {
   }, [isConnected, address, walletAddress]);
 
   return (
-    <div>
+    <div className="main_content_wra">
       <div
         style={{
           display: "flex",
@@ -34,19 +35,14 @@ const Home: NextPage = () => {
           marginTop: "40vh",
         }}
       >
-        <Message />
+        <Message isSigned={isSigned} />
       </div>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          flexBasis: "100%",
-          justifyContent: "center",
-          marginTop: "0.1vh",
-        }}
-      >
-        {isConnected && correctAddress ? <SignButton /> : <IncorrectWallet />}
+      <div className={`message_wrapper ${isSigned===true ? "success-message" : "error-message"} `}>
+        {isConnected && correctAddress ? <SignButton isSigned={isSigned} setIsSigned={setIsSigned} /> : <IncorrectWallet />}
+        <div className="connect_kit_btn">
         <ConnectKitButton />
+        </div>
+        
       </div>
     </div>
   );
