@@ -135,7 +135,7 @@ a {
   align-items: center;
   justify-content: center;
 }
-.connect_kit_btn .cEEfEW.primary {
+.connect_kit_btn div button div {
   border-radius: 30px;
   background-color: #fff;
   cursor: pointer;
