@@ -135,7 +135,7 @@ a {
   align-items: center;
   justify-content: center;
 }
-.connect_kit_btn div button div {
+.connect_kit_btn .primary {
   border-radius: 30px;
   background-color: #fff;
   cursor: pointer;
@@ -146,6 +146,11 @@ a {
   min-width: 245px;
   min-height: 57px;
   transition: all .3s ease-in-out;
+  text-align: center;
+  margin: 0 auto;
+}
+connect_kit_btn .primary div{
+  text-align: center;
 }
 .connect_kit_btn .dmGwqV:hover .sc-grxQYx {
   border-radius: 30px;
