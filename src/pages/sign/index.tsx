@@ -22,6 +22,7 @@ const Home: NextPage = () => {
       } else {
         setCorrectAddress(false);
       }
+      setIsSigned(false)
     }
   }, [isConnected, address, walletAddress]);
 
