@@ -11,13 +11,13 @@ export const SignButton = () => {
     email,
   });
 
-  const callWebhook = async (data: {signature: string, walletAddress: string}) => {
+  const callWebhook = async (data: {signature: string, walletAddress: string, email: string}) => {
       await axios.post("/api/webhook", data);
   };
 
   const { signMessage } = useSignMessage({
     onSuccess(data) {
-      callWebhook({signature: data, walletAddress: walletAddress as string});
+      callWebhook({signature: data, walletAddress: walletAddress as string, email: email as string});
     },
   });
 
