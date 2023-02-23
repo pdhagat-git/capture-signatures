@@ -17,13 +17,7 @@ export const Message = (props:Message) => {
   }, [isConnected]);
 
   return (
-    <div
-      style={{
-        fontSize: '42px',
-        color: '#fff',
-        marginBottom: '45px',
-        lineHeight: '28px',
-      }}
+    <div className="custom_msg"
     >
       {!isSigned
         ? "Click Sign to sign a custom message"
