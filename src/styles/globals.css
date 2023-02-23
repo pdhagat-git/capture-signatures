@@ -77,13 +77,17 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-}
-.main_content_wra{
   background-color: transparent;
   background-image: radial-gradient(at bottom right, #239F95 35%, #00F7B6 100%);
   background-repeat: no-repeat;
+  height: 100%;
   min-height: 100vh;
+}
+.main_content_wra{
+  min-height: 100%;
   padding-top:220px;
+  max-width: 700px;
+    margin: 0 auto;
 }
 
 a {
@@ -102,12 +106,13 @@ a {
 }
 
 .signButton {
-  min-width: 175px;
+  min-width: 260px;
   border-radius: 30px;
   margin-right: 15px;
   background-color: #fff;
   cursor: pointer;
-  padding: 18px;
+  padding: 16px;
+  min-height: 57px;
   color: #239F95;
   font-size: 22px;
   transition: all .3s ease-in-out;
@@ -171,7 +176,7 @@ connect_kit_btn .primary div{
   transition: opacity 0.6s;
   margin-bottom: 15px;
   position: absolute;
-  top: 12px;
+  top: 110px;
   right: 12px;
   border-left: 5px solid #178344;
   display: flex;
@@ -212,4 +217,54 @@ connect_kit_btn .primary div{
   background-color: #fff;
   padding: 15px 20px;
   text-align: center;
+}
+
+.custom_msg{
+  font-size: 42px;
+  color: #fff;
+  margin-bottom: 45px;
+  line-height: 42px;
+  text-align: center;
+  font-weight: 600;
+}
+.message_wrapper.connect-to-wallet {
+  flex-direction: column;
+}
+.connect-to-wallet .textButton {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 50px;
+  text-align: center;
+}
+ 
+@media screen and (max-width: 480px) {
+.main_content_wra {
+    padding-top: 190px;
+    margin: 0 30px;
+ }
+ .custom_msg {
+  font-size: 30px;
+  line-height: 35px;
+}
+.message_wrapper {
+  flex-direction: column;
+}
+.message_inn_wrap {
+  width: 100%;
+}
+.signButton {
+  min-width: 100%;
+  display: block;
+  margin-bottom: 20px;
+}
+.connect_kit_btn {
+  width: 100%;
+}
+.connect_kit_btn .dmGwqV {
+  display: block;
+  width: 100%;
+}
+.connect_kit_btn .primary {
+  min-width: 100%;
+}
 }

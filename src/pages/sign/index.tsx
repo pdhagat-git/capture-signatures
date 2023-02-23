@@ -42,7 +42,7 @@ const Home: NextPage = () => {
         >
           <Message isSigned={isSigned}  setIsSigned={setIsSigned} />
         </div>
-        <div className={`message_wrapper ${isSigned===true ? "success-message" : "error-message"} `}>
+        <div className={`message_wrapper ${isSigned===true ? "success-message" : ""} ${isConnected===false ? "connect-to-wallet" : ""} `}>
           {isConnected && correctAddress ? <SignButton isSigned={isSigned} setIsSigned={setIsSigned} /> : <IncorrectWallet />}
           <div className="connect_kit_btn">
           <ConnectKitButton />
